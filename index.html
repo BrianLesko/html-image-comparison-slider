@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
+<style type="text/css">
+    img-comparison-slider {
+      --divider-width: 2px;
+      --divider-color: #c0c0c0;
+      --default-handle-opacity: 0.3;
+    }
+    
+    .slider-example-opacity-and-size {
+    --default-handle-width: 100px;
+    }
+
+    .slider-example-opacity-and-size:focus {
+        --default-handle-opacity: 0;
+    }
+</style>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="max-width: 70%; overflow: hidden;">
+        <img-comparison-slider class="slider-example-opacity-and-size">
+          <img slot="first" src="image1.jpg" style="width: 100%;" />
+          <img slot="second" src="image2.jpg" style="width: 100%;" />
+        </img-comparison-slider>
+    </div>
+</body>

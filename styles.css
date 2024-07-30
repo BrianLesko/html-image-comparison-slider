@@ -1,0 +1,73 @@
+/* Container for the images and slider */
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Image styling */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Wrapper for overlapping images */
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for the top image wrapper to allow clipping */
+.image-top-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    clip: rect(0, 50%, 100%, 0); /* Initial clip to show 50% of the top image */
+    transition: clip 0.5s;
+}
+
+/* Range slider styling */
+input[type="range"] {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    margin: 0; /* Ensure no default margin interferes */
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/* CSS for dynamically updating clip based on slider */
+input[type="range"]:hover + .img-wrapper .image-top-wrapper {
+    clip: rect(0, calc(var(--slider-value) * 1%), 100%, 0);
+}
