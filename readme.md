@@ -1,6 +1,9 @@
 
 # Image comparison Slider
 
+Check out my deployment of this code on my rental website [here](https://mystudentrental.co)
+
+
 &nbsp;
 
 <div align="center"><img src="preview.png" width="800" alt="Before and after comparison of a real estate rehab. Rennovation done in 2023."></div>
